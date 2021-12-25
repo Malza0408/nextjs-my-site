@@ -41,6 +41,18 @@ export const GlobalStyle = createGlobalStyle`
           color: ${theme.colors.black};
           margin: 0.8rem;
         }
+        h4 {
+          font-size: ${theme.fonts.size.small};
+          font-weight: ${theme.fonts.weight.regular};
+          color: ${theme.colors.black};
+          margin: 0.6rem;
+        }
+        h5 {
+          font-size: ${theme.fonts.size.micro};
+          font-weight: ${theme.fonts.weight.regular};
+          color: ${theme.colors.black};
+          margin: 0.4rem;
+        }
         p {
           font-size: ${theme.fonts.size.regular};
           font-weight: ${theme.fonts.weight.regular};

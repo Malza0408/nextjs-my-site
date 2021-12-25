@@ -12,7 +12,7 @@ const fonts = {
   weight: {
     bold: "700",
     semiBold: "600",
-    regular: "400",
+    regular: "500",
   },
 };
 

@@ -4,24 +4,18 @@ import { ThemeProvider } from "styled-components";
 import theme from "@styles/theme";
 import { NextPage } from "next";
 
-const IndexRender: NextPage = () => {
+const HomeRender: NextPage = () => {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Home />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <Home />
+    </ThemeProvider>
   );
 };
 
 describe("index", () => {
-  it("render test", () => {
-    const { container } = render(<IndexRender />);
+  it("Home Render", () => {
+    const { container } = render(<HomeRender />);
 
-    // 테스트 성공 확인
-    // expect(container).toHaveTextContent("테스트");
-
-    // 테스트 실패 확인
-    expect(container).toHaveTextContent("테스트@@");
+    expect(container).toHaveTextContent(/Malza's Home/i);
   });
 });

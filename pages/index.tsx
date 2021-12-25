@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import styled, { css } from "styled-components";
+import Navbar from "./Navbar";
+import Main from "./Main";
 // import { decreaseNum, increaseNum } from "../redux/modules/count";
 
 interface StyledCricleProps {
@@ -24,13 +26,23 @@ const Circle = styled.div<StyledCricleProps>`
     `}
 `;
 
+const OuterLayout = styled.div`
+  width: 100%;
+  position: fixed;
+  ${({ theme }) => {
+    return css`
+      background-color: ${theme.colors.blue};
+      transition: all ${theme.transitionColor.delay};
+    `;
+  }}
+`;
+
 const Home: NextPage = () => {
   return (
-    <>
-      <h1>테스트는 성공이에요!</h1>
-      <Circle />
-      <Circle huge />
-    </>
+    <OuterLayout>
+      <Navbar />
+      <Main />
+    </OuterLayout>
   );
 };
 

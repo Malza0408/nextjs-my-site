@@ -20,6 +20,7 @@ module.exports = {
     "^@/components/(.*)$": "<rootDir>/components/$1",
     "^@pages/(.*)$": "<rootDir>/pages/$1",
     "^@styles/(.*)$": "<rootDir>/styles/$1",
+    "^@containers/(.*)$": "<rootDir>/containers/$1",
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/.next/"],
