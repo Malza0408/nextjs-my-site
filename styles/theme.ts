@@ -50,7 +50,7 @@ const rotateImage = {
   size: "30rem",
 };
 
-const transitionColor = {
+const transition = {
   delay: "0.4s",
 };
 
@@ -64,7 +64,7 @@ const theme: DefaultTheme = {
   border,
   borderRadius,
   rotateImage,
-  transitionColor,
+  transition,
   paddingSection,
 };
 

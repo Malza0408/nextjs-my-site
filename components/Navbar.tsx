@@ -13,7 +13,7 @@ const Navbar = styled.div`
   ${({ theme }) => {
     return css`
       background-color: ${theme.colors.apricot};
-      transition: all ${theme.transitionColor.delay};
+      transition: all ${theme.transition.delay};
     `;
   }}
 `;
@@ -25,7 +25,7 @@ const NavbarTitle = styled.div`
   ${({ theme }) => {
     return css`
       background-color: ${theme.colors.darkBlue};
-      transition: all ${theme.transitionColor.delay};
+      transition: all ${theme.transition.delay};
       h2 {
         color: ${theme.colors.darkGrey};
         font-weight: ${theme.fonts.weight.regular};

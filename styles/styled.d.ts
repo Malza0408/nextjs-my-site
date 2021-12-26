@@ -47,7 +47,7 @@ declare module "styled-components" {
     rotateImage: {
       size: string;
     };
-    transitionColor: {
+    transition: {
       delay: string;
     };
     paddingSection: {

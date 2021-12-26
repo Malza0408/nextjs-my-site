@@ -28,11 +28,11 @@ const Circle = styled.div<StyledCricleProps>`
 
 const OuterLayout = styled.div`
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
+  /* text-align: center; */
   ${({ theme }) => {
     return css`
       background-color: ${theme.colors.blue};
-      transition: all ${theme.transitionColor.delay};
     `;
   }}
 `;

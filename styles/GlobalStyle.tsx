@@ -80,4 +80,7 @@ export const GlobalStyle = createGlobalStyle`
         }
       `;
     }}
+    .image {
+      border-radius: 50%;
+    }
 `;
