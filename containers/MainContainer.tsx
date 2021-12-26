@@ -2,7 +2,10 @@ import Main from "@/components/Main";
 import React from "react";
 
 const MainContainer = () => {
-  return <Main />;
+  const onClickContactBtn = () => {
+    console.log("Click the Btn");
+  };
+  return <Main onClickContactBtn={onClickContactBtn} />;
 };
 
 export default MainContainer;

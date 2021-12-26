@@ -1,8 +1,10 @@
+import { AppProps } from "next/app";
 import Image from "next/image";
 import React from "react";
 import styled, { css } from "styled-components";
 
 const MainSection = styled.section`
+  background-image: url("/home-background.png");
   width: 100%;
   max-width: 110rem;
   margin: auto;
@@ -47,7 +49,11 @@ const ContactBtn = styled.button`
   }
 `;
 
-const Main = () => {
+type Props = {
+  onClickContactBtn: () => void;
+};
+
+const Main: React.FC<Props> = ({ onClickContactBtn }) => {
   return (
     <>
       <MainSection>
@@ -60,7 +66,7 @@ const Main = () => {
           <br />
         </h1>
         <h2>프론트엔드 개발자 타이틀을 얻기 위해 오늘도 전진중!</h2>
-        <ContactBtn>Contact Me</ContactBtn>
+        <ContactBtn onClick={onClickContactBtn}>Contact Me</ContactBtn>
       </MainSection>
     </>
   );
