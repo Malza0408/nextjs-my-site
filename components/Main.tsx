@@ -1,10 +1,12 @@
-import { AppProps } from "next/app";
 import Image from "next/image";
 import React from "react";
 import styled, { css } from "styled-components";
 
 const MainSection = styled.section`
   background-image: url("/home-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 100%;
   max-width: 110rem;
   margin: auto;

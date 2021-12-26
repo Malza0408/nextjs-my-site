@@ -35,6 +35,7 @@ declare module "styled-components" {
       lightCyan: string;
       darkBlue: string;
       blue: string;
+      lightBlue: string;
     };
     border: {
       bold: string;

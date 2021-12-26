@@ -55,7 +55,7 @@ export const GlobalStyle = createGlobalStyle`
         }
         p {
           font-size: ${theme.fonts.size.regular};
-          font-weight: ${theme.fonts.weight.regular};
+          font-weight: ${theme.fonts.weight.semiBold};
           color: ${theme.colors.black};
           margin: 0.4rem;
         }

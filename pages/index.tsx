@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import styled, { css } from "styled-components";
 import Navbar from "./Navbar";
 import Main from "./Main";
+import AboutContainer from "@containers/AboutContainer";
 // import { decreaseNum, increaseNum } from "../redux/modules/count";
 
 interface StyledCricleProps {
@@ -23,16 +24,17 @@ const Circle = styled.div<StyledCricleProps>`
     css`
       width: 10rem;
       height: 10rem;
+      color: lightblue;
     `}
 `;
 
 const OuterLayout = styled.div`
   width: 100%;
   /* position: fixed; */
-  /* text-align: center; */
+  text-align: center;
   ${({ theme }) => {
     return css`
-      background-color: ${theme.colors.blue};
+      /* background-color: ${theme.colors.blue}; */
     `;
   }}
 `;
@@ -42,6 +44,7 @@ const Home: NextPage = () => {
     <OuterLayout>
       <Navbar />
       <Main />
+      <AboutContainer />
     </OuterLayout>
   );
 };

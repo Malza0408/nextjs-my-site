@@ -34,6 +34,7 @@ const colors = {
   lightCyan: "#4bacb8",
   darkBlue: "#5daddb",
   blue: "#9ccbd6",
+  lightBlue: "#73aace",
 };
 
 const border = {
