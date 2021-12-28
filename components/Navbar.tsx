@@ -6,13 +6,13 @@ const Navbar = styled.div`
   width: 100%;
   max-width: 110rem;
   margin: auto;
-  padding: 1.6rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   ${({ theme }) => {
     return css`
-      background-color: ${theme.colors.apricot};
+      background-color: ${theme.colors.darkCyan};
       transition: all ${theme.transition.delay};
     `;
   }}
@@ -24,7 +24,7 @@ const NavbarTitle = styled.div`
   cursor: pointer;
   ${({ theme }) => {
     return css`
-      background-color: ${theme.colors.darkBlue};
+      /* background-color: ${theme.colors.darkBlue}; */
       transition: all ${theme.transition.delay};
       h2 {
         color: ${theme.colors.darkGrey};
@@ -48,6 +48,19 @@ const NavbarLi = styled.li`
   padding: 0.8rem 1.2rem;
   margin: 0 0.4rem;
   cursor: pointer;
+  ${({ theme }) => {
+    return css`
+      border-radius: ${theme.borderRadius.bold};
+    `;
+  }}
+  &:hover {
+    ${({ theme }) => {
+      return css`
+        background-color: ${theme.colors.lightCyan};
+        transition: all ${theme.transition.delay};
+      `;
+    }}
+  }
 `;
 
 const Navber = () => {
