@@ -1,20 +1,20 @@
-import About from "@/components/About/About";
 import { ThemeProvider } from "styled-components";
 import theme from "@styles/theme";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import Skills from "@/components/Skills/Skills";
 
-const AboutRender = () => {
+const SkillsRender = () => {
   return (
     <ThemeProvider theme={theme}>
-      <About />
+      <Skills />
     </ThemeProvider>
   );
 };
 
-describe("About", () => {
-  it("Abount Render", () => {
-    const { container } = render(<AboutRender />);
-    expect(container).toHaveTextContent(/About Me/i);
+describe("Skills", () => {
+  it("Skills Render", () => {
+    const { container } = render(<SkillsRender />);
+    expect(container).toHaveTextContent(/Skills & Attributes/i);
   });
 });

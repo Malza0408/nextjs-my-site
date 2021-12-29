@@ -18,7 +18,7 @@ const Navbar = styled.div`
   }}
 `;
 
-const NavbarTitle = styled.div`
+const Navbar__title = styled.div`
   width: 20rem;
   text-align: center;
   cursor: pointer;
@@ -35,7 +35,7 @@ const NavbarTitle = styled.div`
   }}
 `;
 
-const NavbarUl = styled.ul`
+const Navbar__ul = styled.ul`
   display: flex;
   ${({ theme }) => {
     return css`
@@ -44,20 +44,21 @@ const NavbarUl = styled.ul`
   }}
 `;
 
-const NavbarLi = styled.li`
+const Navbar__li = styled.li`
   padding: 0.8rem 1.2rem;
   margin: 0 0.4rem;
   cursor: pointer;
   ${({ theme }) => {
     return css`
       border-radius: ${theme.borderRadius.bold};
+      transition: all ${theme.transition.delay};
     `;
   }}
   &:hover {
     ${({ theme }) => {
       return css`
         background-color: ${theme.colors.lightCyan};
-        transition: all ${theme.transition.delay};
+        color: ${theme.colors.white};
       `;
     }}
   }
@@ -66,17 +67,19 @@ const NavbarLi = styled.li`
 const Navber = () => {
   return (
     <Navbar>
-      <NavbarTitle>
+      <Navbar__title>
         <h2>{`Malza's Home`}</h2>
-      </NavbarTitle>
-      <NavbarUl>
-        <NavbarLi>Home</NavbarLi>
-        <NavbarLi>About</NavbarLi>
-        <NavbarLi>Skills</NavbarLi>
-        <NavbarLi>My work</NavbarLi>
-        <NavbarLi>Testimonials</NavbarLi>
-        <NavbarLi>Contact</NavbarLi>
-      </NavbarUl>
+      </Navbar__title>
+      <Navbar__ul>
+        <Navbar__li>
+          <span>Home</span>
+        </Navbar__li>
+        <Navbar__li>About</Navbar__li>
+        <Navbar__li>Skills</Navbar__li>
+        <Navbar__li>My work</Navbar__li>
+        <Navbar__li>Testimonials</Navbar__li>
+        <Navbar__li>Contact</Navbar__li>
+      </Navbar__ul>
     </Navbar>
   );
 };

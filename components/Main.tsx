@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styled, { css } from "styled-components";
 
-const MainSection = styled.section`
+const Main__section = styled.section`
   background-image: url("/home-background.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -51,26 +51,24 @@ const ContactBtn = styled.button`
   }
 `;
 
-type Props = {
+interface Props {
   onClickContactBtn: () => void;
-};
+}
 
 const Main: React.FC<Props> = ({ onClickContactBtn }) => {
   return (
-    <>
-      <MainSection>
-        <ImageWrapper>
-          <StyledImage src="/logo.png" width={"300px"} height={"300px"} />
-        </ImageWrapper>
-        <h1>
-          Hello!
-          <br /> 제 홈페이지에 방문하신 여러분을 환영합니다!
-          <br />
-        </h1>
-        <h2>프론트엔드 개발자 타이틀을 얻기 위해 오늘도 전진중!</h2>
-        <ContactBtn onClick={onClickContactBtn}>Contact Me</ContactBtn>
-      </MainSection>
-    </>
+    <Main__section>
+      <ImageWrapper>
+        <StyledImage src="/logo.png" width={"300px"} height={"300px"} />
+      </ImageWrapper>
+      <h1>
+        Hello!
+        <br /> 제 홈페이지에 방문하신 여러분을 환영합니다!
+        <br />
+      </h1>
+      <h2>프론트엔드 개발자 타이틀을 얻기 위해 오늘도 전진중!</h2>
+      <ContactBtn onClick={onClickContactBtn}>Contact Me</ContactBtn>
+    </Main__section>
   );
 };
 

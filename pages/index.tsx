@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 import styled, { css } from "styled-components";
 import Navbar from "./Navbar";
 import Main from "./Main";
+import Skills from "./Skills";
 import AboutContainer from "@containers/AboutContainer";
-// import { decreaseNum, increaseNum } from "../redux/modules/count";
 
 interface StyledCricleProps {
   huge?: boolean;
@@ -45,6 +45,7 @@ const Home: NextPage = () => {
       <Navbar />
       <Main />
       <AboutContainer />
+      <Skills />
     </OuterLayout>
   );
 };
