@@ -20,6 +20,12 @@ describe("Main", () => {
     expect(container).toHaveTextContent(/Hello/i);
   });
 
+  it("Btn render", () => {
+    const { getByRole } = render(<MainRender />);
+    const btn = getByRole("button");
+    expect(btn).toHaveTextContent(/Contact me/i);
+  });
+
   it("Click the Contact Btn", () => {
     render(<MainRender />);
     userEvent.click(screen.getByText(/Contact/i));

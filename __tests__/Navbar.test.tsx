@@ -17,8 +17,9 @@ describe("Navbar", () => {
     expect(container).toHaveTextContent(/Malza's Home/i);
   });
   it("List render", () => {
-    const { container } = render(<NavbarRender />);
-
-    expect(container).toHaveTextContent(/Contact/i);
+    const { getAllByRole, container } = render(<NavbarRender />);
+    const lists = getAllByRole("list");
+    expect(lists).toHaveLength(1);
+    expect(container).toHaveTextContent(/Home/i);
   });
 });

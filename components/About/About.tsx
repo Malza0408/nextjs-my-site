@@ -3,6 +3,10 @@ import { faJs, faReact } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import AboutIcon from "./AboutIcon";
 
+const About_title = styled.h1`
+  margin-top: 0;
+`;
+
 const About__section = styled.section`
   width: 100%;
   max-width: 110rem;
@@ -19,7 +23,7 @@ const Icon__container = styled.div`
 const About = () => {
   return (
     <About__section>
-      <h1>About Me</h1>
+      <About_title>About Me</About_title>
       <p>
         매일 매일이 쌓여 가치를 창출해 내는 개발자가 되길 바라는 예비
         개발자에요!

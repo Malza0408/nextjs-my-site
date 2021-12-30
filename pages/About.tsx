@@ -1,8 +1,8 @@
 import AboutContainer from "@containers/AboutContainer";
 import React from "react";
 
-const Abount = () => {
+const About = () => {
   return <AboutContainer />;
 };
 
-export default Abount;
+export default About;

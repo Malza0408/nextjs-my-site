@@ -3,9 +3,9 @@ import styled, { css } from "styled-components";
 import theme from "@styles/theme";
 
 const Navbar = styled.div`
-  width: 100%;
+  /* width: 100%;
   max-width: 110rem;
-  margin: auto;
+  margin: auto; */
   padding: 1rem;
   display: flex;
   align-items: center;

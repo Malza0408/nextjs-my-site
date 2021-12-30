@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styled, { css } from "styled-components";
+import { MainProps } from "types/types";
 
 const Main__section = styled.section`
   background-image: url("/home-background.png");
@@ -51,11 +52,7 @@ const ContactBtn = styled.button`
   }
 `;
 
-interface Props {
-  onClickContactBtn: () => void;
-}
-
-const Main: React.FC<Props> = ({ onClickContactBtn }) => {
+const Main: React.FC<MainProps> = ({ onClickContactBtn }) => {
   return (
     <Main__section>
       <ImageWrapper>

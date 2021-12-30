@@ -1,7 +1,7 @@
-import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled, { css } from "styled-components";
+import { AboutProps } from "types/types";
 
 const Icon = styled.div``;
 
@@ -80,12 +80,7 @@ const StackTitle = styled.p`
   }}
 `;
 
-interface Props {
-  icon: IconDefinition;
-  title: string;
-}
-
-const AboutIcon: React.FC<Props> = ({ icon, title }) => {
+const AboutIcon: React.FC<AboutProps> = ({ icon, title }) => {
   return (
     <Icon>
       <Icon__outline>

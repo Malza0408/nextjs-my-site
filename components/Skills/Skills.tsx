@@ -2,12 +2,16 @@ import React from "react";
 import styled, { css } from "styled-components";
 import Skill from "./Skill";
 
+const Skills_title = styled.h1`
+  margin-top: 0;
+`;
+
 const Skills__section = styled.section`
-  width: 100%;
-  max-width: 110rem;
-  margin: auto;
-  padding: 40px;
-  text-align: center;
+  /* width: 100%; */
+  /* max-width: 110rem; */
+  /* margin: auto; */
+  padding: 4rem;
+  /* text-align: center; */
   ${({ theme }) => {
     return css`
       background-color: ${theme.colors.yellow};
@@ -72,7 +76,7 @@ const Etc__list = styled.p`
 const Skills = () => {
   return (
     <Skills__section>
-      <h1>Skills</h1>
+      <Skills_title>Skills</Skills_title>
       <h2>Skills & Attributes</h2>
       <Skills__container>
         <Skills__left>
