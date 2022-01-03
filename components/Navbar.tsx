@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import theme from "@styles/theme";
 
 const Navbar = styled.div`
   padding: 1rem;

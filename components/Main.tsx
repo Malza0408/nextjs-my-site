@@ -52,7 +52,7 @@ const ContactBtn = styled.button`
   }
 `;
 
-const Main: React.FC<MainProps> = ({ onClickContactBtn }) => {
+const Main = ({ onClickContactBtn }: MainProps) => {
   return (
     <Main__section>
       <ImageWrapper>

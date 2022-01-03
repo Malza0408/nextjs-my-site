@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { sizes } from "types/types";
+import { sizes } from "../../types/types";
 import Button from "./Button";
 
 const WorkButton = () => {

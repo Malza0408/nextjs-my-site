@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled, { css } from "styled-components";
-import { AboutProps } from "types/types";
+import { AboutProps } from "../../types/types";
 
 const Icon = styled.div``;
 
@@ -80,7 +80,7 @@ const StackTitle = styled.p`
   }}
 `;
 
-const AboutIcon: React.FC<AboutProps> = ({ icon, title }) => {
+const AboutIcon = ({ icon, title }: AboutProps) => {
   return (
     <Icon>
       <Icon__outline>

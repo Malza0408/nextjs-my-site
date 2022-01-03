@@ -1,8 +1,7 @@
 import MyWork from "@/components/MyWork/MyWork";
 import { ThemeProvider } from "styled-components";
 import theme from "@styles/theme";
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render } from "@testing-library/react";
 
 const MyWorkRender = () => {
   return (

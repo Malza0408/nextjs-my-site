@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css, keyframes } from "styled-components";
-import { ButtonProps, StyledBtnProps } from "types/types";
+import { ButtonProps, StyledBtnProps } from "../../types/types";
 
 const slideLeftSpan = keyframes`
 from {

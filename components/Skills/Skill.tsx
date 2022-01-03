@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { SkillProps } from "types/types";
+import { SkillProps } from "../../types/types";
 
 const Skill__Container = styled.article`
   display: flex;
@@ -43,7 +43,7 @@ const Skill_gage = styled.div<GageType>`
   }}
 `;
 
-const Skill: React.FC<SkillProps> = ({ stack, proficiency }) => {
+const Skill = ({ stack, proficiency }: SkillProps) => {
   return (
     <Skill__Container>
       <Skill__Description>
