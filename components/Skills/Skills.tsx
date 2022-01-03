@@ -23,6 +23,7 @@ const Skills__container = styled.div`
   width: 100%;
   margin: auto;
   display: flex;
+  box-shadow: 5px 5px 5px rgb(73, 72, 72);
   ${({ theme }) => {
     return css`
       background-color: ${theme.colors.darkGrey};

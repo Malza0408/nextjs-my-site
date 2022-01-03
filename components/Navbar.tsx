@@ -3,9 +3,6 @@ import styled, { css } from "styled-components";
 import theme from "@styles/theme";
 
 const Navbar = styled.div`
-  /* width: 100%;
-  max-width: 110rem;
-  margin: auto; */
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -13,7 +10,6 @@ const Navbar = styled.div`
   ${({ theme }) => {
     return css`
       background-color: ${theme.colors.darkCyan};
-      transition: all ${theme.transition.delay};
     `;
   }}
 `;
@@ -24,8 +20,6 @@ const Navbar__title = styled.div`
   cursor: pointer;
   ${({ theme }) => {
     return css`
-      /* background-color: ${theme.colors.darkBlue}; */
-      transition: all ${theme.transition.delay};
       h2 {
         color: ${theme.colors.darkGrey};
         font-weight: ${theme.fonts.weight.regular};

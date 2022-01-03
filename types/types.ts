@@ -1,6 +1,4 @@
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
-import exp from "constants";
-import { MouseEvent } from "react";
 
 export interface ActionProps {
   type: string;
@@ -15,24 +13,37 @@ export interface RootState {
 }
 
 export interface AboutProps {
-  icon: IconDefinition;
-  title: string;
+  readonly icon: IconDefinition;
+  readonly title: string;
 }
 
 export interface SkillProps {
-  stack: string;
-  proficiency: number;
+  readonly stack: string;
+  readonly proficiency: number;
 }
 
 export interface MainProps {
-  onClickContactBtn: () => void;
+  readonly onClickContactBtn: () => void;
 }
 
 export interface MyWorkProps {
-  handleOnClick: (idx: number) => void;
-  btnState: boolean[];
+  readonly handleOnClick: (idx: number) => void;
+  readonly btnState: boolean[];
 }
 
-export interface BtnProps {
-  isSelected?: boolean;
+export const sizes = {
+  large: "15rem",
+  medium: "10rem",
+  small: "7rem",
+};
+
+export interface StyledBtnProps {
+  readonly size?: string | undefined;
+  readonly isSelected?: boolean;
+}
+
+export interface ButtonProps extends StyledBtnProps {
+  readonly innerText: string;
+  readonly idx: number;
+  readonly handleOnClick: (idx: number) => void;
 }
