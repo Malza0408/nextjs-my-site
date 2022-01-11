@@ -10,11 +10,14 @@ const OuterLayout = styled.div`
   width: 100%;
   max-width: 110rem;
   margin: auto;
-  /* padding: 40px; */
   text-align: center;
+`;
+
+const InnerLayout = styled.div`
+  position: relative;
   ${({ theme }) => {
     return css`
-      /* background-color: ${theme.colors.blue}; */
+      top: ${theme.navbarHeight.height};
     `;
   }}
 `;
@@ -23,10 +26,14 @@ const Home: NextPage = () => {
   return (
     <OuterLayout>
       <Navbar />
-      <Main />
-      <About />
-      <Skills />
-      <MyWork />
+      <InnerLayout>
+        <main role="main">
+          <Main />
+          <About />
+          <Skills />
+          <MyWork />
+        </main>
+      </InnerLayout>
     </OuterLayout>
   );
 };

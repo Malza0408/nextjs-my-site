@@ -13,8 +13,14 @@ const Skill__Description = styled.div`
   justify-content: space-between;
 `;
 
-const Skill__Info = styled.span`
+const Skill__Info = styled.h4`
   margin-bottom: 0.3rem;
+  ${({ theme }) => {
+    return css`
+      font-size: ${theme.fonts.size.small};
+      color: ${theme.colors.white};
+    `;
+  }}
 `;
 
 const Skill__bar = styled.div`

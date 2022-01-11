@@ -59,6 +59,10 @@ const paddingSection = {
   pd: "4rem",
 };
 
+const navbarHeight = {
+  height: "6rem",
+};
+
 const theme: DefaultTheme = {
   fonts,
   colors,
@@ -67,6 +71,7 @@ const theme: DefaultTheme = {
   rotateImage,
   transition,
   paddingSection,
+  navbarHeight,
 };
 
 export default theme;

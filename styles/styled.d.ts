@@ -54,5 +54,8 @@ declare module "styled-components" {
     paddingSection: {
       pd: string;
     };
+    navbarHeight: {
+      height: string;
+    };
   }
 }
