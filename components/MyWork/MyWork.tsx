@@ -18,13 +18,13 @@ const MyWork__section = styled.section`
   text-align: center;
 `;
 
-const MyWork = ({ isSelected, handleOnClick }: MyWorkProps) => {
+const MyWork = ({ isSelected, handleOnClick, isClicked }: MyWorkProps) => {
   return (
     <MyWork__section>
       <MyWork__title>My work</MyWork__title>
       <MyWork__subtitle>Projects</MyWork__subtitle>
       <WorkButtons isSelected={isSelected} handleOnClick={handleOnClick} />
-      <Projects isSelected={isSelected} />
+      <Projects isSelected={isSelected} isClicked={isClicked} />
     </MyWork__section>
   );
 };

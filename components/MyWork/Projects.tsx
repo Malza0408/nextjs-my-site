@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Project from "./Project";
 
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { ProjectsProps, WorkButtonProps } from "types/types";
 
-const MyworkProjects = styled.section`
+const ProjectShowAndHidden = keyframes`
+0% {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+50% {
+  transform: scale(0.98) translateY(20px);
+  opacity: 0;
+}
+
+100% {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+`;
+
+const MyworkProjects = styled.section<{ isClicked: boolean }>`
   width: 90%;
   display: flex;
   flex-wrap: wrap;
@@ -12,11 +29,16 @@ const MyworkProjects = styled.section`
   text-align: center;
   align-items: center;
   margin: 3rem auto 3rem auto;
+  animation: ${(props) =>
+    props.isClicked &&
+    css`
+      ${ProjectShowAndHidden} 0.5s linear normal;
+    `};
 `;
 
-const Projects = ({ isSelected }: ProjectsProps) => {
+const Projects = ({ isSelected, isClicked }: ProjectsProps) => {
   return (
-    <MyworkProjects>
+    <MyworkProjects isClicked={isClicked}>
       <Project
         src="/projects/overwatch.png"
         alt="overwatch"

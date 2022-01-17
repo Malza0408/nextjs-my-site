@@ -58,11 +58,14 @@ export interface projectProps {
 
 export interface WorkButtonProps {
   readonly isSelected: boolean[];
-  readonly handleOnClick?: (idx: number) => void;
+  readonly handleOnClick: (idx: number) => void;
 }
 
-export interface MyWorkProps extends WorkButtonProps {}
+export interface MyWorkProps extends WorkButtonProps {
+  readonly isClicked: boolean;
+}
 
 export interface ProjectsProps {
   readonly isSelected: boolean[];
+  readonly isClicked: boolean;
 }
