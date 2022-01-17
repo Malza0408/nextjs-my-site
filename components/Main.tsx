@@ -56,7 +56,12 @@ const Main = ({ onClickContactBtn }: MainProps) => {
   return (
     <Main__section>
       <ImageWrapper>
-        <StyledImage src="/logo.png" width={"300px"} height={"300px"} />
+        <StyledImage
+          src="/logo.png"
+          width={"300px"}
+          height={"300px"}
+          alt="Logo"
+        />
       </ImageWrapper>
       <h1>
         Hello!

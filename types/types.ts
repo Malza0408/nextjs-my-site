@@ -26,10 +26,10 @@ export interface MainProps {
   readonly onClickContactBtn: () => void;
 }
 
-export interface MyWorkProps {
-  readonly handleOnClick: (idx: number) => void;
-  readonly btnState: boolean[];
-}
+// export interface MyWorkProps {
+//   readonly handleOnClick: (idx: number) => void;
+//   readonly btnState: boolean[];
+// }
 
 export const sizes = {
   large: "15rem",
@@ -46,4 +46,23 @@ export interface ButtonProps extends StyledBtnProps {
   readonly innerText: string;
   readonly idx: number;
   readonly handleOnClick: (idx: number) => void;
+}
+
+export interface projectProps {
+  readonly src: string;
+  readonly alt: string;
+  readonly title: string;
+  readonly description: string;
+  readonly isSelected: boolean;
+}
+
+export interface WorkButtonProps {
+  readonly isSelected: boolean[];
+  readonly handleOnClick?: (idx: number) => void;
+}
+
+export interface MyWorkProps extends WorkButtonProps {}
+
+export interface ProjectsProps {
+  readonly isSelected: boolean[];
 }

@@ -1,20 +1,13 @@
 import React, { useState } from "react";
-import { sizes } from "../../types/types";
+import styled from "styled-components";
+import { sizes, WorkButtonProps } from "../../types/types";
 import Button from "./Button";
 
-const WorkButton = () => {
-  const [isSelected, setIsSelected] = useState([true, false, false, false]);
-  const [selectedBtn, setSelectedBtn] = useState(0);
+const ButtnContainer = styled.section``;
 
-  const handleOnClick = (idx: number) => {
-    const newState = [...isSelected];
-    newState[selectedBtn] = false;
-    setSelectedBtn(idx);
-    newState[idx] = !newState[idx];
-    setIsSelected(newState);
-  };
+const WorkButton = ({ isSelected, handleOnClick }: WorkButtonProps) => {
   return (
-    <>
+    <ButtnContainer>
       <Button
         size={sizes.large}
         isSelected={isSelected[0]}
@@ -43,7 +36,7 @@ const WorkButton = () => {
         idx={3}
         handleOnClick={handleOnClick}
       />
-    </>
+    </ButtnContainer>
   );
 };
 

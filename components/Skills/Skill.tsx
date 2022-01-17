@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { SkillProps } from "../../types/types";
 
-const Skill__Container = styled.article`
+const Skill__Container = styled.section`
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
